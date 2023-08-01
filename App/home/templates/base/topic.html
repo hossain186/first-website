@@ -1,0 +1,43 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+<style>
+    .topic h2{
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+
+    .topic h2 a {
+        color: #020202;
+        text-decoration: none;}
+
+
+    .add a button{
+        width: 74px;
+        height: 30px;
+        margin: 16px;
+        color: #d714af;
+        font-size: 15px;
+        font-family: revert-layer;
+    }
+</style>
+<div>
+    <div class="add">
+        <a href="{% url 'addtopic' %}"><button>Add Topic</button></a>
+    </div>
+    <div class="topic">
+        
+        {% for topic in topics  %}
+        <h2><a href="{% url 'artical' topic.id%}">{{topic.name}}</a></h2>
+            
+        {% endfor %}
+            
+    </div>
+</div>
+
+
+
+    
+{% endblock content %}
+    

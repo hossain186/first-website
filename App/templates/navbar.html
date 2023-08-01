@@ -1,0 +1,50 @@
+
+<style>
+
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    .navbar{
+        display: flex;
+        background-color: aquamarine;
+        padding: 25px;
+    }
+    .option{
+        
+        padding-left: 10px;
+        float: right;
+    }
+    .option a{
+        
+        text-decoration: none;
+        color: #e30d9a;
+        
+        font-size: 20px;
+        padding-left: 10px;
+    }
+    .Search input{
+        height: 25px;
+    }
+</style>
+
+
+<div class="navbar">
+    <div class="Search">
+        <form action="" method="GET">
+            <input type="text" placeholder="Search hare">
+        </form>
+
+    </div>
+
+    <div class="option">
+   
+       
+        <a href="/">Home</a>
+        <a href="addartical">Add Artical</a>
+        <a href="{% url 'topic' %}">Topic</a>
+        <a href="{% url 'contect' %}">Contact</a>
+        <a href="{% url 'about' %}">About</a>
+        
+    </div>
+</div>

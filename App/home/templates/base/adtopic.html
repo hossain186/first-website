@@ -1,0 +1,43 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+<style>
+    .goback{
+        text-decoration: none;
+color: white;
+border: 1px solid;
+border-radius: 6px;
+background: black;
+    }
+
+    .input{
+        padding: 10px;
+        color: rgb(232, 234, 238);
+        background: #0c0c0b;
+    }
+    .a{
+        margin-top: 18px;
+    }
+    form{
+        
+        margin-left: 10px;
+
+}
+</style>
+<form action="" method="POST">
+
+    {% csrf_token %}
+
+    {{form}} <br>
+
+    <div class="a">
+        <input class="input" type="submit" value="confirm">
+    <a class="goback" href="{% url 'topic' %}">go back</a>
+    </div>
+</form>
+
+
+    
+{% endblock content %}
+    
